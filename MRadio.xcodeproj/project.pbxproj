@@ -12,6 +12,7 @@
 		4E56881322493C6500B78789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E56881122493C6500B78789 /* Main.storyboard */; };
 		4E56881522493C6A00B78789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E56881422493C6A00B78789 /* Assets.xcassets */; };
 		4E56881822493C6A00B78789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E56881622493C6A00B78789 /* LaunchScreen.storyboard */; };
+		B97D62BB724421FD603B4051 /* Pods_MRadio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46D96EA34D143C8B3490C7 /* Pods_MRadio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		4E56881422493C6A00B78789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E56881722493C6A00B78789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E56881922493C6A00B78789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67E8A3ABEA808DC025D25C0F /* Pods-MRadio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRadio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRadio/Pods-MRadio.debug.xcconfig"; sourceTree = "<group>"; };
+		A7B86191068697088FC6465D /* Pods-MRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRadio.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRadio/Pods-MRadio.release.xcconfig"; sourceTree = "<group>"; };
+		CE46D96EA34D143C8B3490C7 /* Pods_MRadio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRadio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97D62BB724421FD603B4051 /* Pods_MRadio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				4E56880C22493C6500B78789 /* MRadio */,
 				4E56880B22493C6500B78789 /* Products */,
+				C6AF47DB6082ECEA198017E5 /* Pods */,
+				73E61927C0AF980A300E3C6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = MRadio;
 			sourceTree = "<group>";
 		};
+		73E61927C0AF980A300E3C6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE46D96EA34D143C8B3490C7 /* Pods_MRadio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6AF47DB6082ECEA198017E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67E8A3ABEA808DC025D25C0F /* Pods-MRadio.debug.xcconfig */,
+				A7B86191068697088FC6465D /* Pods-MRadio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E56881C22493C6A00B78789 /* Build configuration list for PBXNativeTarget "MRadio" */;
 			buildPhases = (
+				0610DE28C59967430E28C21C /* [CP] Check Pods Manifest.lock */,
 				4E56880622493C6500B78789 /* Sources */,
 				4E56880722493C6500B78789 /* Frameworks */,
 				4E56880822493C6500B78789 /* Resources */,
@@ -129,6 +154,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0610DE28C59967430E28C21C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MRadio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E56880622493C6500B78789 /* Sources */ = {
@@ -280,6 +330,7 @@
 		};
 		4E56881D22493C6A00B78789 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67E8A3ABEA808DC025D25C0F /* Pods-MRadio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +349,7 @@
 		};
 		4E56881E22493C6A00B78789 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7B86191068697088FC6465D /* Pods-MRadio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
