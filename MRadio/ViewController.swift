@@ -27,10 +27,11 @@ class ViewController: UIViewController {
         let button = sender as! UIButton
         if(!isPlaying) {
             player?.play()
-            button.setTitle("Stop", for: .normal)
+            button.setImage(UIImage(named: "pause"), for: .normal)
         } else {
             button.setTitle("Play", for: .normal)
             player?.pause()
+            button.setImage(UIImage(named: "play"), for: .normal)
         }
         isPlaying = !isPlaying
     }
